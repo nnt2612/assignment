@@ -1,0 +1,43 @@
+.parent{
+    display: -webkit-inline-box;
+    overflow: hidden;
+    width:100%;
+}
+
+div.myDiv {
+    width: 200px;
+    height: 200px;
+    margin: 41px 189px 79px -98px;
+    border: 2px solid freen;
+    float:left;
+    overflow: hidden;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); /* Standard syntax */
+}
+div.myDiv:nth-child(even){
+    margin: -100px 39px 0px -248px;
+}
+
+.myDiv img{
+    width: 142%;
+    height: 142%;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin: -41px;
+
+}
+
+.myDiv img:hover {
+    opacity: 0.7;
+    width : 200%;
+    height: 200%;
+    margin: -100px;
+}

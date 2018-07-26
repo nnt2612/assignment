@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/product/create', 'ProductController@create');
-Route::post('/product/create', 'ProductController@store');
-Route::get('/product/list', 'ProductController@list');
-
+Route::resource('/product', 'ProductController');
+Route::resource('/admin/category', 'CategoryController');
+Route::get('/home', function (){
+    return view('home');
+});
 

@@ -15,29 +15,29 @@
             <h1>Product form</h1>
         </div>
         <div class="row">
-            <form action="/product" method="post">
+            <form action="/product/update/{{$product->id}}" method="post">
                 {{csrf_field()}}
                 <div class="form-group">
                     <label>Product Name :</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control" value="{{$product->name}}">
                 </div>
                 <div class="form-group">
                     <label>Product Description :</label>
-                    <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="description" id="description" cols="30" rows="10" class="form-control">{{$product->description}}</textarea>
                 </div>
                 <div class="form-group">
                     <label>Price :</label>
-                    <input type="text" name="price" class="form-control">
+                    <input type="text" name="price" class="form-control" value="{{$product->price}}">
                 </div>
                 <div class="form-group">
                     <label>Image :</label>
-                    <input type="text" name="thumbnail" class="form-control">
+                    <input type="text" name="thumbnail" class="form-control" value="{{$product->image}}">
                 </div>
                 <div class="form-group">
                     <label>Category</label>
                     <select name="categoryId" class="form-control">
-                        <option value="1">Korea Lipsticks</option>
-                        <option value="2">US Lipsticks</option>
+                        <option value="1">Korea Lipstick</option>
+                        <option value="2">US Lipstick</option>
                     </select>
                 </div>
                 <div class="form-group">
